@@ -47,7 +47,7 @@ The insights garnered from this analysis are intended to guide:
 ## Data Import and Preliminary View
 
 ```{r echo=FALSE}
-jobs <- read_rds("data/dev.bg-jobs-clean.rds")
+jobs <- read_rds("../data/dev.bg-jobs-clean.rds")
 glimpse(jobs)
 ```
 After data validation and cleaning the dataset contains 1,848 rows and 11 columns. Each row represents a unique job offer. 

@@ -13,6 +13,9 @@ guidelines.
 The data has been scraped, saved as RDS file and cleaned. The code for
 these steps is included.
 
+It can also be explored in this [interactive dashboard in
+Tableau](https://public.tableau.com/views/BulgarianITJobMarket/Dashboard2?:language=en-US&:display_count=n&:origin=viz_share_link).
+
 # Objectives of the Analysis
 
 The analysis is driven by a desire to uncover insights into:
@@ -49,24 +52,24 @@ The insights garnered from this analysis are intended to guide:
 
     ## Rows: 1,848
     ## Columns: 11
-    ## $ job_title       <chr> "Software Developers and Electronics Engineers", "Software Developers and Electronics Engineers", "Software Developers an…
-    ## $ company_name    <chr> "Broadcom Bulgaria", "Broadcom Bulgaria", "Broadcom Bulgaria", "TelebidPro", "Luxoft", "iCard", "Sirma", "Catenate Bulgar…
-    ## $ job_link        <chr> "https://dev.bg/company/jobads/broadcom-bulgaria-software-developers-and-electronics-engineers/", "https://dev.bg/company…
-    ## $ tech_stack      <list> <"English", "Verilog">, <"English", "Verilog">, <"English", "Verilog">, "English", <"English", "Java", "PostgreSQL", "Sp…
-    ## $ categories      <list> <"Backend Development", "Junior / Intern">, <"Backend Development", "Junior / Intern">, <"Backend Development", "Junior …
-    ## $ work_model      <chr> "Office-based", "Office-based", "Office-based", "Office-based", "Office-based", "Office-based", "Office-based", "Fully Re…
-    ## $ location        <chr> "Пловдив", "Варна", "София", "София", "София", "Варна", "Казанлък", "Fully Remote", "София", "София", "София", "София", "…
-    ## $ salary_min      <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
-    ## $ salary_max      <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
-    ## $ job_description <chr> "\n\t\t\t\tDid you know Broadcom is a 200 Billion dollar company?\nDo you want to be a part of this multi-billion company…
-    ## $ seniority       <chr> "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "…
+    ## $ job_title       <chr> "Software Developers and Electronics Engineers", "Software Developers and Electronics Engineers", "Software Developers and Electronics Engineers", "Junior Web D…
+    ## $ company_name    <chr> "Broadcom Bulgaria", "Broadcom Bulgaria", "Broadcom Bulgaria", "TelebidPro", "Luxoft", "iCard", "Sirma", "Catenate Bulgaria", "Accedia", "Pytek", "Pytek", "Bulw…
+    ## $ job_link        <chr> "https://dev.bg/company/jobads/broadcom-bulgaria-software-developers-and-electronics-engineers/", "https://dev.bg/company/jobads/broadcom-bulgaria-software-deve…
+    ## $ tech_stack      <list> <"English", "Verilog">, <"English", "Verilog">, <"English", "Verilog">, "English", <"English", "Java", "PostgreSQL", "Spring Boot">, <"C++", "English">, <"C#",…
+    ## $ categories      <list> <"Backend Development", "Junior / Intern">, <"Backend Development", "Junior / Intern">, <"Backend Development", "Junior / Intern">, <"Backend Development", "Fr…
+    ## $ work_model      <chr> "Office-based", "Office-based", "Office-based", "Office-based", "Office-based", "Office-based", "Office-based", "Fully Remote", "Hybrid", "Office-based", "Offic…
+    ## $ location        <chr> "Пловдив", "Варна", "София", "София", "София", "Варна", "Казанлък", "Fully Remote", "София", "София", "София", "София", "София", "Варна", "София", "Варна", "Соф…
+    ## $ salary_min      <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+    ## $ salary_max      <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+    ## $ job_description <chr> "\n\t\t\t\tDid you know Broadcom is a 200 Billion dollar company?\nDo you want to be a part of this multi-billion company and help us build the tech future toge…
+    ## $ seniority       <chr> "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", "intern", …
 
 After data validation and cleaning the dataset contains 1,848 rows and
 11 columns. Each row represents a unique job offer.
 
 ## Who is hiring?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 The companies are arranged in descending order of job offers, with
 “People and Places” - an IT recruiting agency, having the highest number
@@ -79,7 +82,7 @@ growth and investment in talent acquisition within the IT sector.
 
 ## What working models are offered?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
 -   **Office-based** work model dominates the job market with a
     significant lead, showing 1,012 job offers. This suggests that
@@ -103,7 +106,7 @@ different work models.
 
 ## Where are jobs located?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
 -   Unsurprisingly, **Sofia** stands out as the leading location with a
     substantial margin, indicating it as the central hub for job offers
@@ -122,7 +125,7 @@ different work models.
 
 ## What are the expected seniority levels?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 -   **Mid-level** roles are most prevalent, with 918 job offers,
     showcasing a strong demand for professionals who have gained a solid
@@ -156,7 +159,7 @@ aiming to ascend to the highest echelons of their career trajectory.
 
 ## What technologies are required?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
 -   **SQL** leads the chart as the most in-demand technology with 383
     job listings mentioning it, emphasizing its fundamental role in data
@@ -193,7 +196,7 @@ upskill or reskill in high-demand areas.
 
 ## What number of technologies candidates are expected to know?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
 -   At the top of the list, **Fullstack Development** shows the highest
     average number of technologies required, with 7.64, suggesting that
@@ -234,7 +237,7 @@ current expertise.
 
 ## WHat is the distribution of the number of technologies required by category?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 -   **Backend Development** exhibits a wide distribution, with several
     outliers indicating that certain job listings demand a significantly
@@ -275,7 +278,7 @@ sectors within the IT industry.
 
 ## What’s the distribution of the number of technologies required by seniority?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
 -   **Intern** positions show the most compact box, suggesting that
     internships tend to require a smaller and more consistent set of
@@ -310,7 +313,7 @@ breadth of skills they might need to acquire or hone.
 
 ## Which categories are in demand?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
 -   **Backend Development** leads with the highest number of job
     postings at 518. This indicates a strong demand for skills
@@ -395,7 +398,7 @@ consider when looking at potential earnings growth.
 
 ## What is the distribution of salary ranges?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-12-1.png)![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-12-2.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-12-1.png)![](analysis_files/figure-markdown_strict/unnamed-chunk-12-2.png)
 
 Lower salary range distribution:
 
@@ -426,7 +429,7 @@ against the market.
 
 ## How do the salary ranges look broken down by seniority?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-13-1.png)![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-13-2.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-13-1.png)![](analysis_files/figure-markdown_strict/unnamed-chunk-13-2.png)
 
 Lower Range Salaries by Seniority Level:
 
@@ -473,22 +476,21 @@ roles, likely explained by the higher salaries in certain categories.
 ## How do the salary ranges look broken down by category?
 
     ## # A tibble: 11 × 9
-    ##    categories            avg_min_salary avg_max_salary median_min_salary median_max_salary min_min_salary max_max_salary sd_min_salary sd_max_sal…¹
-    ##    <chr>                          <dbl>          <dbl>             <dbl>             <dbl>          <dbl>          <dbl>         <dbl>        <dbl>
-    ##  1 Backend Development            6097.          9251.              6000              9000           3500          20000        1664.         2816.
-    ##  2 Customer Support               1150           1700               1150              1700           1100           2000          70.7         424.
-    ##  3 Data Science                   6220          11520               6100              9000           5000          20000        1301.         5812.
-    ##  4 Frontend Development           4983.          7542.              5000              7000           1300          11000        1550.         2330.
-    ##  5 Fullstack Development          4267.          8122.              4200              8500           2400          12500        1763.         3336.
-    ##  6 Infrastructure                 5583.          8767.              6000              9500           3000          13000        1717.         2892.
-    ##  7 Mobile Development             5542.          8917.              5500              9250           3000          12000        1514.         2265.
-    ##  8 PM/BA and more                 4457.          6571.              4900              6200           1800           9400        1287.         1923.
-    ##  9 Quality Assurance              4500           7050               5000              7550           3000           8100        1000          1462.
-    ## 10 Technical Support              3200           4140               3000              4200           2000           5000         837.         1024.
-    ## 11 UI/UX, Arts                    2700           3500               2700              3500           2700           3500          NA            NA 
-    ## # … with abbreviated variable name ¹​sd_max_salary
+    ##    categories            avg_min_salary avg_max_salary median_min_salary median_max_salary min_min_salary max_max_salary sd_min_salary sd_max_salary
+    ##    <chr>                          <dbl>          <dbl>             <dbl>             <dbl>          <dbl>          <dbl>         <dbl>         <dbl>
+    ##  1 Backend Development            6097.          9251.              6000              9000           3500          20000        1664.          2816.
+    ##  2 Customer Support               1150           1700               1150              1700           1100           2000          70.7          424.
+    ##  3 Data Science                   6220          11520               6100              9000           5000          20000        1301.          5812.
+    ##  4 Frontend Development           4983.          7542.              5000              7000           1300          11000        1550.          2330.
+    ##  5 Fullstack Development          4267.          8122.              4200              8500           2400          12500        1763.          3336.
+    ##  6 Infrastructure                 5583.          8767.              6000              9500           3000          13000        1717.          2892.
+    ##  7 Mobile Development             5542.          8917.              5500              9250           3000          12000        1514.          2265.
+    ##  8 PM/BA and more                 4457.          6571.              4900              6200           1800           9400        1287.          1923.
+    ##  9 Quality Assurance              4500           7050               5000              7550           3000           8100        1000           1462.
+    ## 10 Technical Support              3200           4140               3000              4200           2000           5000         837.          1024.
+    ## 11 UI/UX, Arts                    2700           3500               2700              3500           2700           3500          NA             NA
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-14-1.png)![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-14-2.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-14-1.png)![](analysis_files/figure-markdown_strict/unnamed-chunk-14-2.png)
 
 Lower Salary Range:
 
@@ -545,7 +547,7 @@ positions which require a high number of technologies.
 
 ## Which technologies pay the most?
 
-![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-16-1.png)![](dev.bg-analysis_files/figure-markdown_strict/unnamed-chunk-16-2.png)
+![](analysis_files/figure-markdown_strict/unnamed-chunk-16-1.png)![](analysis_files/figure-markdown_strict/unnamed-chunk-16-2.png)
 
 Given that this project is conducted in R, the first plot definitely
 brings a smile to the author’s face. However, it should be noted that
